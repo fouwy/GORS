@@ -1,1 +1,3 @@
-uname 
+uname -a
+
+
