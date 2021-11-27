@@ -18,11 +18,11 @@ sudo docker run --name my-nginx -v /home/gors/html:/usr/share/nginx/html:ro -p 1
 
 #Browsertime
 sudo docker pull sitespeedio/browsertime
-sudo docker run --shm-size=1g --rm -v "$(pwd)":/browsertime sitespeedio/browsertime http://10.1.1.1:8080/
+#runs 5 times with delay of 2 sec between runs
+sudo docker run --shm-size=1g --rm -v "$(pwd)":/browsertime sitespeedio/browsertime -n 5 --delay 2000 http://10.1.1.1:8080/
 
 #Nagios
 # sudo docker pull jasonrivers/nagios:latest
 # sudo docker run --name nagios4 -p 192.168.109.151:9000:80 jasonrivers/nagios:latest
-#mudar para outro
-# ssh -i /home/gors/g.rsa.txt 192.168.109.152
+
 
